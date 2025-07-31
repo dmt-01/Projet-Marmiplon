@@ -1,37 +1,34 @@
-import { Router } from "express";
+import  router  from "./router";
 
  
-
-const recettesRouter = Router();
-
-recettesRouter.get("/", (request, response) => {
+router.get("/", (request, response) => {
   const controller = new RecettesController(request, response);
   controller.browseRecettes();
 });
 
-recettesRouter.get("/add", (request, response) => {
+router.get("/add", (request, response) => {
   const controller = new RecettesController(request, response);
   controller.createRecette(); 
 });
 
-recettesRouter.post("/", (request, response) => {
+router.post("/", (request, response) => {
   const controller = new RecettesController(request, response);
   controller.addRecette();
 });
 
-recettesRouter.get("/:id", (request, response) => {
+router.get("/:id", (request, response) => {
   const controller = new RecettesController(request, response);
   controller.readRecette();
 });
 
-recettesRouter.put("/:id", (request, response) => {
+router.put("/:id", (request, response) => {
   const controller = new RecettesController(request, response);
   controller.editRecette();
 });
 
-recettesRouter.delete("/:id", (request, response) => {
+router.delete("/:id", (request, response) => {
   const controller = new RecettesController(request, response);
   controller.deleteRecette();
 });
 
-export default recettesRouter;
+export default router;
