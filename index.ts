@@ -1,9 +1,19 @@
 import Express from 'express';
 import router from './routes/router';
+import { fileURLToPath } from "node:url";
+import path from "node:path";
 
 const app = Express();
 const PORT = 3001;
 
+// @ts-ignore
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "view"));
+
+app.use(Express.static(path.join(__dirname, "public")));
 app.use (router);
 
 app.listen(PORT, () => {
