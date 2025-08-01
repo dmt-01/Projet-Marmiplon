@@ -1,10 +1,13 @@
 // Voir commentaire dans router.ts
 import  router  from "./router";
+import { HomeController } from "../Controller/homeController";
 
 //Browse
 router.get("/", (request, response) => {
     const controller = new HomeController(request, response);
-    controller.browseHome();
+    controller.home();
+    // console.log(controller);
+    
 });
 
 //Read
@@ -13,10 +16,10 @@ router.get("/:id",(request, response) => {
     controller.readHome();
 });
 
-//Eddit
+//Edit
 router.put("/:id", (request, response) => {
     const controller = new HomeController(request, response);
-    controller.edditHome();
+    controller.editHome();
 });
 
 //Add
@@ -27,7 +30,7 @@ router.post("/", (request, response) => {
 
 //Delete
 router.delete("/:id", (request, response) => {
-    const controller = new homeController(request, response);
+    const controller = new HomeController(request, response);
     controller.deleteHome();
 });
 
