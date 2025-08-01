@@ -31,3 +31,13 @@ app.listen(PORT, () => {
 //=============================================================================//
 
 
+//===============================================================================
+// => NomDeConstante_SpécificationDelaConstante
+// => spécifier à quoi correspond la constante 
+
+// const router => contante commune à toutes les routes
+// 
+
+
+
+
