@@ -13,10 +13,10 @@ router.get("/:id",(request, response) => {
     controller.readHome();
 });
 
-//Eddit
+//Edit
 router.put("/:id", (request, response) => {
     const controller = new HomeController(request, response);
-    controller.edditHome();
+    controller.editHome();
 });
 
 //Add
@@ -27,7 +27,7 @@ router.post("/", (request, response) => {
 
 //Delete
 router.delete("/:id", (request, response) => {
-    const controller = new homeController(request, response);
+    const controller = new HomeController(request, response);
     controller.deleteHome();
 });
 
