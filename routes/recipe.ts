@@ -1,36 +1,37 @@
 
-// Voir commentaire dans router.ts
-import  router  from "./router";
+import { Router } from "express";
+import { recipeController } from "../Controller/recipeController";
 
- 
-router.get("/", (request, response) => {
-  const controller = new RecettesController(request, response);
+const recetteRouter = Router();
+
+// Browse
+recetteRouter.get("/desserts", (request, response) => {
+  const controller = new recipeController(request, response);
   controller.browseRecettes();
 });
 
-router.get("/add", (request, response) => {
-  const controller = new RecettesController(request, response);
-  controller.createRecette(); 
-});
-
-router.post("/", (request, response) => {
-  const controller = new RecettesController(request, response);
-  controller.addRecette();
-});
-
-router.get("/:id", (request, response) => {
-  const controller = new RecettesController(request, response);
+// Read
+recetteRouter.get("/desserts/:id", (request, response) => {
+  const controller = new recipeController(request, response);
   controller.readRecette();
 });
 
-router.put("/:id", (request, response) => {
-  const controller = new RecettesController(request, response);
+// Edit
+recetteRouter.put("/desserts/:id", (request, response) => {
+  const controller = new recipeController(request, response);
   controller.editRecette();
 });
 
-router.delete("/:id", (request, response) => {
-  const controller = new RecettesController(request, response);
+// Add
+recetteRouter.post("/desserts", (request, response) => {
+  const controller = new recipeController(request, response);
+  controller.addRecette();
+});
+
+// Delete
+recetteRouter.delete("/desserts/:id", (request, response) => {
+  const controller = new recipeController(request, response);
   controller.deleteRecette();
 });
 
-export default router;
+export default recetteRouter;
