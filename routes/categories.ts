@@ -1,8 +1,7 @@
 import router from "./router";
 
-//BREAD
-
-//Brow
+//Méthode BREAD
+//Browse
 router.get("/", (request, response) => {
     const controller = new HomeController(request, response);
     controller.browseHome();
@@ -12,7 +11,7 @@ router.get("/", (request, response) => {
 router.get("/:id", (request, response) => {
     const controller = new HomeController(request, response);
     controller.readHome();
-})
+});
 
 //Edit 
 router.put("/:id", (request, response) => {
