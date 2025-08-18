@@ -1,4 +1,14 @@
 import type { Request, Response } from "express";
+import { categories } from "../data";
+
+export const homePageController = (request: Request, response: Response) => {
+  const allCategories = categories;
+
+  response.render("pages/Acceuil", {
+    categories: allCategories,
+    title: "Marmiplon - Accueil"
+  });
+};
 
 // La classe "Controller" est une classe abstraite
 // qui sert de base pour tous les contrôleurs
