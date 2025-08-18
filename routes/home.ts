@@ -1,11 +1,10 @@
 import { Router } from "express";
-import recetteRouter from "./recipe";
-import categorieRouter from "./categories";
+import { HomeController } from "../Controller/homeController";
 
-export const router = Router();
+const home = Router();
 
-router.use(categorieRouter);
+home.get("/", (request, response) => {
+  const controller = new HomeController(request, response);
+});
 
-router.use(`/Categorie`, recetteRouter);
-
-export default router;
+export default home;

@@ -93,13 +93,7 @@ export const recipeIngredients: RecipeIngredient[] = [
   { id: 1, quantity: 1, unit: "tranche", ingredientId: 1, recipeId: 101 },
   { id: 2, quantity: 2, unit: "unités", ingredientId: 2, recipeId: 101 },
   { id: 3, quantity: 5, unit: "feuilles", ingredientId: 3, recipeId: 101 },
-  {
-    id: 4,
-    quantity: 2,
-    unit: "cuillères à soupe",
-    ingredientId: 4,
-    recipeId: 101,
-  },
+  { id: 4,quantity: 2,unit: "cuillères à soupe",ingredientId: 4,recipeId: 101,},
 
   // recette 102 : Salade Grecque
   { id: 5, quantity: 1, unit: "unité", ingredientId: 5, recipeId: 102 },
@@ -127,13 +121,7 @@ export const recipeIngredients: RecipeIngredient[] = [
 
   // recette 301: Tiramisu
   { id: 19, quantity: 200, unit: "grammes", ingredientId: 18, recipeId: 301 },
-  {
-    id: 20,
-    quantity: 250,
-    unit: "millilitres",
-    ingredientId: 19,
-    recipeId: 301,
-  },
+  { id: 20,quantity: 250,unit: "millilitres",ingredientId: 19,recipeId: 301,},
   { id: 21, quantity: 250, unit: "grammes", ingredientId: 20, recipeId: 301 },
   { id: 22, quantity: 2, unit: "unités", ingredientId: 10, recipeId: 301 },
   { id: 23, quantity: 20, unit: "grammes", ingredientId: 21, recipeId: 301 },
@@ -150,70 +138,35 @@ export const recipeInstructions: RecipeInstruction[] = [
 
   // recette 101 : Bruschetta
   { id: 1, step: 1, description: "Grillez le pain.", recipeId: 101 },
-  {
-    id: 2,
-    step: 2,
-    description: "Ajoutez les tomates et le basilic.",
-    recipeId: 101,
-  },
+  { id: 2,step: 2,description: "Ajoutez les tomates et le basilic.",recipeId: 101,},
   { id: 3, step: 3, description: "Arrosez d'huile d'olive.", recipeId: 101 },
 
   // recette 102 : Salade Grecque
   { id: 4, step: 1, description: "Coupez les légumes.", recipeId: 102 },
-  {
-    id: 5,
-    step: 2,
-    description: "Ajoutez la feta et les olives.",
-    recipeId: 102,
-  },
+  { id: 5,step: 2,description: "Ajoutez la feta et les olives.",recipeId: 102,},
   { id: 6, step: 3, description: "Assaisonnez.", recipeId: 102 },
 
   // PLAT PRINCIPAUX = id:2//
 
   // recette: 201 : Pâtes Carbonara
   { id: 7, step: 1, description: "Faites cuire les pâtes.", recipeId: 201 },
-  {
-    id: 8,
-    step: 2,
-    description: "Mélangez avec les œufs, la pancetta et le parmesan.",
-    recipeId: 201,
-  },
+  { id: 8,step: 2,description: "Mélangez avec les œufs, la pancetta et le parmesan.",recipeId: 201,},
 
   // recette 202: Poulet Rôti
   { id: 9, step: 1, description: "Préchauffez le four.", recipeId: 202 },
-  {
-    id: 10,
-    step: 2,
-    description: "Badigeonnez le poulet d'herbes et de beurre.",
-    recipeId: 202,
-  },
+  { id: 10,step: 2,description: "Badigeonnez le poulet d'herbes et de beurre.",recipeId: 202,},
   { id: 11, step: 3, description: "Faites rôtir.", recipeId: 202 },
 
   //DESSERT = id:3//
 
   // recette 301: Tiramisu
-  {
-    id: 12,
-    step: 1,
-    description: "Trempez les biscuits dans le café.",
-    recipeId: 301,
-  },
-  {
-    id: 13,
-    step: 2,
-    description: "Alternez avec la crème au mascarpone.",
-    recipeId: 301,
-  },
+  { id: 12,step: 1,description: "Trempez les biscuits dans le café.",recipeId: 301,},
+  { id: 13,step: 2,description: "Alternez avec la crème au mascarpone.",recipeId: 301,},
   { id: 14, step: 3, description: "Saupoudrez de cacao.", recipeId: 301 },
 
   // recette 302: Tarte aux Pommes
   { id: 15, step: 1, description: "Étalez la pâte.", recipeId: 302 },
-  {
-    id: 16,
-    step: 2,
-    description: "Ajoutez les pommes sucrées et la cannelle.",
-    recipeId: 302,
-  },
+  { id: 16,step: 2,description: "Ajoutez les pommes sucrées et la cannelle.",recipeId: 302,},
   { id: 17, step: 3, description: "Faites cuire.", recipeId: 302 },
 ];
 

@@ -1,10 +1,10 @@
-import Express from "express";
-import router from "./routes/home";
+import Express, { Router } from "express";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const app = Express();
 const PORT = 3001;
+const router = Router();
 
 // @ts-ignore
 const __filename = fileURLToPath(import.meta.url);
