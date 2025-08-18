@@ -1,36 +1,36 @@
-import router from "./router";
-// import { request, response } from "express";
+import { Router } from "express";
 
+const categorieRouter = Router();
 
 //Méthode BREAD
-//Browse
-router.get("/", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.browseHome();
-});
+//Brows
+// categorieRouter.get("/", (request, response) => {
+//     const controller = new HomeController(request, response);
+//     controller.browseHome();
+// });
 
-//Read
-router.get("/:id", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.readHome();
-});
+//Rea
+// categorieRouter.get("/:id", (request, response) => {
+//     const controller = new HomeController(request, response);
+//     controller.readHome();
+// });
 
-//Edit 
-router.put("/:id", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.editHome();
-});
+//Edit
+// categorieRouter.put("/:id", (request, response) => {
+//     const controller = new HomeController(request, response);
+//     controller.editHome();
+// });
 
-//Add
-router.post("/", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.addHome();
-});
+//Ad
+// categorieRouter.post("/", (request, response) => {
+//     const controller = new HomeController(request, response);
+//     controller.addHome();
+// });
 
-//Delete
-router.delete("/:id", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.deleteHome();
-});
+//Delet
+// categorieRouter.delete("/:id", (request, response) => {
+//     const controller = new HomeController(request, response);
+//     controller.deleteHome();
+// });
 
-export default router;
+export default categorieRouter;

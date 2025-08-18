@@ -1,5 +1,5 @@
-import Express from 'express';
-import router from './routes/router';
+import Express from "express";
+import router from "./routes/home";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 
@@ -14,25 +14,15 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "view"));
 
 app.use(Express.static(path.join(__dirname, "public")));
-app.use (router);
+app.use(router);
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-
-
-
-
-
-
-
-
-
 //=============================================================================//
-                         //nom de variable defini ensemble//
+//nom de variable defini ensemble//
 
-                         
 // entree, plat , dessert = category
 // ingredients = ingredient
 // liste ingrédient de recette = listIngredient
@@ -41,13 +31,10 @@ app.listen(PORT, () => {
 //=============================================================================//
 
 
+
 //===============================================================================
 // => NomDeConstante_SpécificationDelaConstante
-// => spécifier à quoi correspond la constante 
+// => spécifier à quoi correspond la constante
 
 // const router => contante commune à toutes les routes
-// 
-
-
-
-
+//

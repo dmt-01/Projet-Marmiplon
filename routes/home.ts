@@ -1,37 +1,11 @@
-// Voir commentaire dans router.ts
-import  router  from "./router";
-import { HomeController } from "../Controller/homeController";
+import { Router } from "express";
+import recetteRouter from "./recipe";
+import categorieRouter from "./categories";
 
-//Browse
-router.get("/", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.home();
-    // console.log(controller);
-    
-});
+export const router = Router();
 
-//Read
-router.get("/:id",(request, response) => {
-    const controller = new HomeController(request, response);
-    controller.readHome();
-});
+router.use(categorieRouter);
 
-//Edit
-router.put("/:id", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.editHome();
-});
-
-//Add
-router.post("/", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.addHome();
-});
-
-//Delete
-router.delete("/:id", (request, response) => {
-    const controller = new HomeController(request, response);
-    controller.deleteHome();
-});
+router.use(`/Categorie`, recetteRouter);
 
 export default router;

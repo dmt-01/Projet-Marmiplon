@@ -9,6 +9,7 @@ public home() {
 
 this.response.render("pages/Accueil");
 }
+
 }
 
 
