@@ -6,7 +6,6 @@ import { router } from "./routes";
 const app = Express();
 const PORT = 3001;
 
-
 // @ts-ignore
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

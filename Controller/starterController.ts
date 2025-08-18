@@ -1,40 +1,42 @@
-import { Controller } from "../libs/Controller";
+ import { Controller } from "../libs/Controller";
 
-export class recipeController extends Controller {
+ export class starterController extends Controller {
 
-  public browseRecettes() {
-    this.response.render("pages/Recettes", {
-      message: "Voici la liste des recettes",
+
+   public browseRecettes() {
+     this.response.render("pages/Recettes", {
+       message: "Voici la liste des recettes",
       
-    });
-  }
+     });
+   }
 
-  public readRecette() {
-    const id = this.request.params.id;
-    this.response.render("pages/Recettes", {
+   public readRecette() {
+     const id = this.request.params.id;
+     console.log(id)
+     this.response.render("pages/Recettes", {
       message: `Détails de la recette ${id}`,
-    });
-  }
+     });
+   }
 
-  public editRecette() {
-    const id = this.request.params.id;
+   public editRecette() {
+     const id = this.request.params.id;
    
-    this.response.render("pages/Recettes", {
-      message: `Modifier la recette ${id}`,
-    });
-  }
+     this.response.render("pages/Recettes", {
+       message: `Modifier la recette ${id}`,
+     });
+   }
 
-  public addRecette() {
+   public addRecette() {
     
-    this.response.render("pages/Recettes", {
-      message: "Ajouter une nouvelle recette",
-    });
-  }
+     this.response.render("pages/Recettes", {
+       message: "Ajouter une nouvelle recette",     });
+   }
 
-  public deleteRecette() {
-    const id = this.request.params.id;
-    this.response.render("pages/Recettes", {
-      message: `Supprimer la recette ${id}`,
-    });
-  }
-}
+   public deleteRecette() {
+     const id = this.request.params.id;
+     this.response.render("pages/Recettes", {
+       message: `Supprimer la recette ${id}`,
+     });
+   }
+ }
+
