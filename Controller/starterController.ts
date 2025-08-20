@@ -2,7 +2,6 @@
   import { recipes } from "../data";
 
 
-
   export class starterController extends Controller {
 
 
@@ -21,6 +20,7 @@
       data: selectedRecette
       });
     }
+
 
     public editStarter() {
       const id = this.request.params.id;
