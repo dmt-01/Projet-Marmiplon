@@ -1,6 +1,5 @@
-import { Controller } from "../libs/Controller";
 import { categories } from "../data";
-import { log } from "node:console";
+import { Controller } from "../libs/Controller";
 // def d'un tableau de données
 
 export class HomeController extends Controller {
@@ -14,22 +13,5 @@ export class HomeController extends Controller {
       categories: allCategories,
       title: "Marmiplon - Accueil",
     });
-
-    // this.response.sender("pages/Home");
-  
 }
 }
-
-/////////
-// public home() {
-//     const allCategories = categories;
-
-//     this.response.render("pages/Home", {
-//       categories: allCategories,
-//       title: "Marmiplon - Accueil",
-//     });
-
-//     this.response.render("pages/Home");
-//   }
-// }
-

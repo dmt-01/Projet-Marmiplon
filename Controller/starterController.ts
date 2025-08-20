@@ -1,4 +1,4 @@
-  import { Controller } from "../libs/Controller";
+import { Controller } from "../libs/Controller";
 
 const recettes = [
   { id: 1, quantity: 1, unit: "tranche", ingredientId: 1, recipeId: 101 },
@@ -32,8 +32,6 @@ const recettes = [
       });
     }
 
-
-    
     public editRecette() {
       const id = this.request.params.id;
       this.response.render("pages/Recettes", {
