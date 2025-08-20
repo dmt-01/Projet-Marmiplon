@@ -6,32 +6,32 @@ const starterRouter = Router();
 
 starterRouter.get("/", (request, response) => {
   const controller = new starterController(request, response);
-  controller.browseRecettes();
+  controller.browseStarter();
    
 });
 
 
 starterRouter.get("/:id", (request, response) => {
   const controller = new starterController(request, response);
-  controller.readRecette();
+  controller.readStarter();
 });
 
 
 starterRouter.put("/:id", (request, response) => {
   const controller = new starterController(request, response);
-  controller.editRecette();
+  controller.editStarter();
 });
 
 
 starterRouter.post("/", (request, response) => {
   const controller = new starterController(request, response);
-  controller.addRecette();
+  controller.addStarter();
 });
 
 
 starterRouter.delete("/:id", (request, response) => {
   const controller = new starterController(request, response);
-  controller.deleteRecette();
+  controller.deleteStarter();
 });
 
 
