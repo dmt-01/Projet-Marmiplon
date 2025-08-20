@@ -8,7 +8,7 @@ export const router = Router();
 
 router.use(home);
 
-router.use(`/home`, starterRouter);
+router.use(starterRouter);
 
 router.use(`/home`, mainCourseRouter);
 
