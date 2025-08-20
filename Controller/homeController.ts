@@ -13,3 +13,5 @@ export class HomeController extends Controller {
       categories: allCategories,
       title: "Marmiplon - Accueil",
     });
+  }
+}
