@@ -15,7 +15,7 @@ export class HomeController extends Controller {
       title: "Marmiplon - Accueil",
     });
 
-    this.response.sender("pages/Home");
+    // this.response.sender("pages/Home");
   
 }
 }
