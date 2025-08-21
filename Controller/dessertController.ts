@@ -12,14 +12,13 @@ export class dessertController extends Controller {
     public readRecipe() {
         const dessertId = this.request.params.id;
         const dessertSelected = recipes.find (function (recipe) {
-            return recipe.id === parseInt(recipesID)
+            // return recipe.id === parseInt(recipesID)
         })
         this.response.render("pages/Recipe", {
-            data:recipeSelected
+            // data:recipeSelected
         });
     }
 
     public editRecipe() {
-        const
     }
 }
