@@ -4,7 +4,6 @@
   export class starterController extends Controller {
 
 
-
     public browseStarter() {
        this.response.render("pages/Recipe", {
       data:recipes

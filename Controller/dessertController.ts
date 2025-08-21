@@ -22,13 +22,13 @@ export class dessertController extends Controller {
     public editDessert() {
         const id = this.request.params.id;
         this.response.render("pages/Recipe", {
-        data: recipes
+        data:recipes
         });
     }
 
     public addDessert() {
         this.response.render("pages/Recipe", {
-        data: recipes
+        data:recipes
         });
     }
 

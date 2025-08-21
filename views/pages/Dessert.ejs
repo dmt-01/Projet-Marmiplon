@@ -1,0 +1,24 @@
+<%- include("../partials/head", { title: "Marmiplon - Recette"}) %>
+<%- include("../partials/header") %>
+
+<main>
+    <h2><%= data.title %></h2>
+    <h2><%= data.recipe %></h2>
+
+    <section>
+        <h3>Ingrédients</h3>
+        <ul>
+            <% if (data.ingredients) { %>
+                <% data.ingredients.forEach(function(item) { %>
+                    <li><%= item %></li>
+               <% }) %>
+           <% } %>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Instructions</h3>
+    </section>
+</main>
+
+<%- include("../partials/footer") %>

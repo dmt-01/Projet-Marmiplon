@@ -1,7 +1,7 @@
 import Express from "express";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { router } from "./routes";
+import router from "./routes/main_course";
 
 const app = Express();
 const PORT = 3001;
