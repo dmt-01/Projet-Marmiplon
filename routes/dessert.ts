@@ -8,31 +8,31 @@ const dessertRouter = Router();
 // Brows
 dessertRouter.get("/", (request, response) => {
   const controller = new dessertController(request, response);
-  controller.browseRecipes();
+  controller.browseDessert();
 });
 
 // Read
 dessertRouter.get("/:id", (request, response) => {
   const controller = new dessertController(request, response);
-  // controller.readHome();
+  controller.readDessert();
 });
 
 // Edit
 dessertRouter.put("/:id", (request, response) => {
   const controller = new dessertController(request, response);
-  // controller.editHome();
+  controller.editDessert();
 });
 
 // Add
 dessertRouter.post("/", (request, response) => {
   const controller = new dessertController(request, response);
-  // controller.addHome();
+  controller.addDessert();
 });
 
 // Delete
 dessertRouter.delete("/:id", (request, response) => {
   const controller = new dessertController(request, response);
-  // controller.deleteHome();
+  controller.deleteDessert();
 });
 
 export default dessertRouter;
