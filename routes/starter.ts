@@ -1,37 +1,31 @@
 import { Router } from "express";
-// changer le nom sur le bon controlleur
-import { recipeController } from "../Controller/starterController";
+import { starterController } from "../Controller/starterController";
 
 const starterRouter = Router();
 
-// Browse
-starterRouter.get("/desserts", (request, response) => {
-  const controller = new recipeController(request, response);
-  controller.browseRecettes();
+starterRouter.get("/", (request, response) => {
+  const controller = new starterController(request, response);
+  controller.browseStarter();
 });
 
-// Read
-starterRouter.get("/desserts/:id", (request, response) => {
-  const controller = new recipeController(request, response);
-  controller.readRecette();
+starterRouter.get("/:id", (request, response) => {
+  const controller = new starterController(request, response);
+  controller.readStarter();
 });
 
-// Edit
-starterRouter.put("/desserts/:id", (request, response) => {
-  const controller = new recipeController(request, response);
-  controller.editRecette();
+starterRouter.put("/:id", (request, response) => {
+  const controller = new starterController(request, response);
+  controller.editStarter();
 });
 
-// Add
-starterRouter.post("/desserts", (request, response) => {
-  const controller = new recipeController(request, response);
-  controller.addRecette();
+starterRouter.post("/", (request, response) => {
+  const controller = new starterController(request, response);
+  controller.addStarter();
 });
 
-// Delete
-starterRouter.delete("/desserts/:id", (request, response) => {
-  const controller = new recipeController(request, response);
-  controller.deleteRecette();
+starterRouter.delete("/:id", (request, response) => {
+  const controller = new starterController(request, response);
+  controller.deleteStarter();
 });
 
 export default starterRouter;

@@ -8,10 +8,10 @@ export const router = Router();
 
 router.use(home);
 
-router.use(`/home`, starterRouter);
+router.use(`/starter`, starterRouter);
 
-router.use(`/home`, mainCourseRouter);
+router.use(`/main`, mainCourseRouter);
 
-router.use(`/home`, dessertRouter);
+router.use(`/dessert`, dessertRouter);
 
 export default router;

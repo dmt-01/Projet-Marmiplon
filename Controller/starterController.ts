@@ -1,45 +1,46 @@
   import { Controller } from "../libs/Controller";
   import { recipes } from "../data";
-  
 
   export class starterController extends Controller {
 
 
-    public browseRecipes() {
+
+    public browseStarter() {
       this.response.render("pages/Recipe", {
       data:recipes
        });
     }
 
-    public readRecipe() {
-      const recipesId = this.request.params.id;
-      const recipeSelected = recipes.find (function (recipe) {
-        return  recipe.id === parseInt(recipesId)
+    public readStarter() {
+      const recetteId = this.request.params.id;
+      const selectedRecette = recipes.find (function (recipe) {
+        return  recipe.id === parseInt(recetteId)
       })
       this.response.render("pages/Recipe", {
-      data:recipeSelected
+      data: selectedRecette
       });
     }
-    
-    public editRecipe() {
+
+
+    public editStarter() {
       const id = this.request.params.id;
-      this.response.render("pages/Recipe", {
+     this.response.render("pages/Recipe", {
       data:recipes
       });
     }
 
-    public addRecipe() {
+
+    public addStarter() {
     this.response.render("pages/Recipe", { 
     data:recipes
           });
     }
 
-    public deleteRecipe() {
+
+    public deleteStarter() {
       const id = this.request.params.id;
       this.response.render("pages/Recipe", {
        data:recipes
       });
     }
   }
-
-

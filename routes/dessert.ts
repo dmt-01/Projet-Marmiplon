@@ -11,7 +11,7 @@ dessertRouter.get("/", (request, response) => {
   // controller.browseHome();
 });
 
-// Rea
+// Read
 dessertRouter.get("/:id", (request, response) => {
   const controller = new HomeController(request, response);
   // controller.readHome();
@@ -23,7 +23,7 @@ dessertRouter.put("/:id", (request, response) => {
   // controller.editHome();
 });
 
-// Ad
+// Add
 dessertRouter.post("/", (request, response) => {
   const controller = new HomeController(request, response);
   // controller.addHome();
