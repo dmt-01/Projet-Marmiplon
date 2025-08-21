@@ -1,5 +1,5 @@
   import { Controller } from "../libs/Controller";
-  import { recipes } from "../data";
+  import { recipes, recipeIngredients,RecipeInstruction,ingredients } from "../data";
 
   export class starterController extends Controller {
 
@@ -16,11 +16,27 @@
       const selectedRecette = recipes.find (function (recipe) {
         return  recipe.id === parseInt(recetteId)
       })
-      this.response.render("pages/Recipe", {
-      data: selectedRecette
-      });
-    }
+      
 
+       const selectedIngridients = recipeIngredients.filter (function (dataIngredients) {
+        return dataIngredients.recipeId === parseInt(recetteId);
+      
+       }).map(function(dataIngredients) {
+        const data = ingredients.find (function (ingredientInfo) {
+          return ingredientInfo.id === dataIngredients.ingredientId;
+        })
+         return  {
+           ...dataIngredients,name:data?.name 
+         }
+       });
+
+       console.log(selectedIngridients)
+      this.response.render("pages/Recipe", {
+      data: selectedRecette, ingredients:selectedIngridients 
+      });
+    
+ }
+      
 
     public editStarter() {
       const id = this.request.params.id;
