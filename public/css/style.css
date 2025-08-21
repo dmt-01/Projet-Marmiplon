@@ -1,13 +1,13 @@
 header {
   min-height: 35vh;
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-image: url(../images/ioannis-sarantis-pX5h48q0poY-unsplash.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
 h1 {
@@ -33,23 +33,26 @@ body {
 }
 
 .starters, .courses, .desserts {
-  width:10%;
+  width: 10%;
   border-color: brown;
-  border-style:solid;
+  border-style: solid;
   border-radius: 10%;
   border-width: 1px;
   gap: 150px;
-  
 }
 
 .starters {
   background-image: url(../images/imgstarter.jpg);
-} 
+}
+
 .courses {
   background-image: url(../images/imgcourse.jpg);
 }
+
 .desserts {
   background-image: url(../images/imgdessert.jpg);
 }
+
+
 
 /*# sourceMappingURL=style.css.map */
