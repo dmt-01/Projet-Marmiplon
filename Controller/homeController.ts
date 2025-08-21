@@ -6,12 +6,13 @@ export class HomeController extends Controller {
   // va aller chercher les datas des 3 catégories ds data.ts
   public home() {
     const allCategories = categories;
+    // console.log(allCategories);
+    
 
-    this.response.render("pages/Acceuil", {
+    this.response.render("pages/Home", {
       categories: allCategories,
       title: "Marmiplon - Accueil",
     });
-
-    this.response.render("pages/Accueil");
-  }
+  
+}
 }
