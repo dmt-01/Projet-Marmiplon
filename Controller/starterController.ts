@@ -1,9 +1,8 @@
   import { Controller } from "../libs/Controller";
   import { recipes } from "../data";
 
-
-
   export class starterController extends Controller {
+
 
 
     public browseStarter() {
@@ -22,6 +21,7 @@
       });
     }
 
+
     public editStarter() {
       const id = this.request.params.id;
      this.response.render("pages/Recipe", {
@@ -29,11 +29,13 @@
       });
     }
 
+
     public addStarter() {
     this.response.render("pages/Recipe", { 
     data:recipes
           });
     }
+
 
     public deleteStarter() {
       const id = this.request.params.id;
@@ -42,4 +44,3 @@
       });
     }
   }
-

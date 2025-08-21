@@ -1,38 +1,33 @@
 import { Router } from "express";
-// changer le nom sur le bon controlleur
-import { HomeController } from "../Controller/homeController";
+import { mainController } from "../Controller/mainCourseController";
+
 
 const mainCourseRouter = Router();
 
-// Méthode BREAD
-// Brows
+
 mainCourseRouter.get("/", (request, response) => {
-  const controller = new HomeController(request, response);
-  // controller.browseHome();
+  const controller = new mainController(request, response);
+  controller.browseMain();
 });
 
-// Read
 mainCourseRouter.get("/:id", (request, response) => {
-  const controller = new HomeController(request, response);
-  // controller.readHome();
+  const controller = new mainController(request, response);
+  controller.readMain();
 });
 
-// Edit
 mainCourseRouter.put("/:id", (request, response) => {
-  const controller = new HomeController(request, response);
-  // controller.editHome();
+  const controller = new mainController(request, response);
+  controller.editMain();
 });
 
-// Add
 mainCourseRouter.post("/", (request, response) => {
-  const controller = new HomeController(request, response);
-  // controller.addHome();
+  const controller = new mainController(request, response);
+ controller.addMain();
 });
 
-// Delete
 mainCourseRouter.delete("/:id", (request, response) => {
-  const controller = new HomeController(request, response);
-  // controller.deleteHome();
+  const controller = new mainController(request, response);
+  controller.deleteMain();
 });
 
 export default mainCourseRouter;

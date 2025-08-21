@@ -1,5 +1,5 @@
-import { Controller } from "../libs/Controller";
 import { categories } from "../data";
+import { Controller } from "../libs/Controller";
 // def d'un tableau de données
 
 export class HomeController extends Controller {
@@ -13,6 +13,5 @@ export class HomeController extends Controller {
       categories: allCategories,
       title: "Marmiplon - Accueil",
     });
-  
-}
+  }
 }
