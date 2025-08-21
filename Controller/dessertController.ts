@@ -15,7 +15,7 @@ export class dessertController extends Controller {
             return recipe.id === parseInt(recipeId)
         })
         this.response.render("pages/Recipe", {
-        data:recipeSelected
+        data: recipeSelected
         });
     }
 
@@ -35,7 +35,7 @@ export class dessertController extends Controller {
     public deleteDessert() {
         const id = this.request.params.id;
         this.response.render("pages/Recipe", {
-        data:recipes
+        data: recipes
         });
     }
 }
