@@ -4,13 +4,12 @@
   export class starterController extends Controller {
 
 
-
     public browseStarter() {
        this.response.render("pages/Recipe", {
       data:recipes
        });
     }
-
+    
     public readStarter() {
       const recetteId = this.request.params.id;
       const selectedRecette = recipes.find (function (recipe) {
