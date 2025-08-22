@@ -1,5 +1,5 @@
   import { Controller } from "../libs/Controller";
-  import { recipes, recipeIngredients,RecipeInstruction,ingredients } from "../data";
+  import { recipes, recipeIngredients, recipeInstructions,ingredients } from "../data";
 
   export class starterController extends Controller {
 
@@ -28,11 +28,21 @@
            ...dataIngredients,name:data?.name 
          }
        });
+      
 
-       console.log(selectedIngridients)
+       const selectedInstructions = recipeInstructions.filter(function (step) {
+        return step.recipeId === parseInt(recetteId);
+
+       }).map(function(step) {
+        return step.description
+       } )
+      
       this.response.render("pages/Recipe", {
-      data: selectedRecette, ingredients:selectedIngridients 
-      });
+             data: selectedRecette, 
+             ingredients: selectedIngridients,
+             instructions: selectedInstructions
+});
+
     
  }
       

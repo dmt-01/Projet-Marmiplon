@@ -175,7 +175,9 @@ export const recipes: Recipe[] = [
     id: 101,
     title: "Bruschetta",
     description: "Une entrée italienne classique.",
-  },
+    
+   }
+  ,
   {
     id: 102,
     title: "Salade Grecque",
