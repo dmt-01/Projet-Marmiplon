@@ -1,9 +1,7 @@
 import { Router } from "express";
 import { mainController } from "../Controller/mainCourseController";
 
-
 const mainCourseRouter = Router();
-
 
 mainCourseRouter.get("/", (request, response) => {
   const controller = new mainController(request, response);
@@ -22,7 +20,7 @@ mainCourseRouter.put("/:id", (request, response) => {
 
 mainCourseRouter.post("/", (request, response) => {
   const controller = new mainController(request, response);
- controller.addMain();
+  controller.addMain();
 });
 
 mainCourseRouter.delete("/:id", (request, response) => {
