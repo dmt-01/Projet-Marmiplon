@@ -9,8 +9,8 @@
         <h3>Ingrédients</h3>
         <ul>
             <% if (data.ingredients) { %>
-                <% data.ingredients.forEach(function(item) { %>
-                    <li><%= item %></li>
+                <% data.ingredients.forEach(function(step) { %>
+                    <li><%= step %></li>
                <% }) %>
            <% } %>
         </ul>
@@ -18,7 +18,16 @@
 
     <section>
         <h3>Instructions</h3>
+        <ul>
+            <% if (data.instructions) { %>
+                <%data.instructions.forEach(function(step) { %>
+                    <li><%= step %></li>
+                <% }) %>
+            <% } %>
+        </ul>
     </section>
+
+    <a href="/mainCourse" class="btn">Retour aux plats</a>
 </main>
 
 <%- include("../partials/footer") %>

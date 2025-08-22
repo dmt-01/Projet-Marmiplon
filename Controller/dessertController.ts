@@ -5,7 +5,7 @@ export class dessertController extends Controller {
 
     public browseDessert() {
         this.response.render("pages/Recipe", {
-        data:recipes
+        data:recipes,
         });
     }
 
@@ -15,27 +15,27 @@ export class dessertController extends Controller {
             return recipe.id === parseInt(recipeId)
         })
         this.response.render("pages/Recipe", {
-        data: recipeSelected
+        data:recipeSelected,
         });
     }
 
     public editDessert() {
         const id = this.request.params.id;
         this.response.render("pages/Recipe", {
-        data:recipes
+        data:recipes,
         });
     }
 
     public addDessert() {
         this.response.render("pages/Recipe", {
-        data:recipes
+        data:recipes,
         });
     }
 
     public deleteDessert() {
         const id = this.request.params.id;
         this.response.render("pages/Recipe", {
-        data: recipes
+        data:recipes,
         });
     }
 }

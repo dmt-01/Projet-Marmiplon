@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { dessertController } from "../Controller/dessertController";
-// changer le nom sur le bon controlleur
 
 const dessertRouter = Router();
 
