@@ -15,7 +15,7 @@ export class starterController extends Controller {
 
   public readStarter() {
     const recetteId = this.request.params.id;
-    const selectedRecette = recipes.find(function (recipe) {
+    const selectedRecette = recipes.find(function (recipe) { 
       return recipe.id === parseInt(recetteId);
     });
 
