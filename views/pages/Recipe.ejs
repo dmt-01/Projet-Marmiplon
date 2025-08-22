@@ -10,11 +10,13 @@
     <ul>
       <% if (data.ingredients) { %>
         <% data.ingredients.forEach(function(item) { %>
-          <li><%= item %></li>
+          <li><%= item.name %> - <%= item.quantity %> <%= item.unit %></li>
         <% }) %>
       <% } %>
     </ul>
   </section>
+
+
   <section>
     <h3>Instructions</h3>
     <ol>

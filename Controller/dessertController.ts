@@ -3,22 +3,39 @@ import { recipes } from "../data";
 
 export class dessertController extends Controller {
 
-    public browseRecipes() {
+    public browseDessert() {
         this.response.render("pages/Recipe", {
         data:recipes
         });
     }
 
-    public readRecipe() {
-        const dessertId = this.request.params.id;
-        const dessertSelected = recipes.find (function (recipe) {
-            // return recipe.id === parseInt(recipesID)
+    public readDessert() {
+        const recipeId = this.request.params.id;
+        const recipeSelected = recipes.find (function (recipe) {
+            return recipe.id === parseInt(recipeId)
         })
         this.response.render("pages/Recipe", {
-            // data:recipeSelected
+        data: recipeSelected
         });
     }
 
-    public editRecipe() {
+    public editDessert() {
+        const id = this.request.params.id;
+        this.response.render("pages/Recipe", {
+        data:recipes
+        });
+    }
+
+    public addDessert() {
+        this.response.render("pages/Recipe", {
+        data:recipes
+        });
+    }
+
+    public deleteDessert() {
+        const id = this.request.params.id;
+        this.response.render("pages/Recipe", {
+        data: recipes
+        });
     }
 }
